@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require("body-parser")
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
-mongoose.connect("mongodb+srv://varundb:varun@cluster0.pqsyb.mongodb.net/notesDB",{ useNewUrlParser: true },{ useUnifiedTopology: true}, )
+mongoose.connect("mongodb+srv://varundb:varun@cluster0.pqsyb.mongodb.net/notesDB",{ useNewUrlParser: true ,useUnifiedTopology: true}, )
 
 const notesSchema   ={
     title: String,
