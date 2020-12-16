@@ -18,6 +18,7 @@ app.post('/',(req,res)=>{
     let newNote = new Note({
         title:req.body.title,
         content:req.body.content
+        
     })
     newNote.save()
     res.redirect('/')
