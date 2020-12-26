@@ -2,16 +2,18 @@
   "name": "mongodb-node",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/varun1048/mongodb-node.git"
   },
-  "author": "varun",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/varun1048/mongodb-node/issues"
@@ -19,7 +21,8 @@
   "homepage": "https://github.com/varun1048/mongodb-node#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongoose": "^5.11.7"
+    "mongoose": "^5.11.8"
   }
 }
