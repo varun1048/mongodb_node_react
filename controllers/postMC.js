@@ -13,6 +13,7 @@ router.get('/',(req,res)=>{
 })
 
 router.post("/",(req,res)=>{
+    console.log("i am here")
     let newRocord = new postMessage({
         title: req.body.title,
         message :req.body.message

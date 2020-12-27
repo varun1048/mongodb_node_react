@@ -1,12 +1,13 @@
 require('./db')
 const express = require("express")
-const body = require("body-parser")
 const app = express()
+const cors = require("cors")
 
-let postMessages = require("./controllers/postMC.js")
 
-app.use(body.json())
+let postMessages = require("./controllers/postMC.js") 
 
-app.listen(5000,console.log("Port under : 5000"))
+app.use(cors())
+app.use(express.json())
 
 app.use("/postMessages",postMessages)
+app.listen(5000,console.log("Port under : 5000"))
