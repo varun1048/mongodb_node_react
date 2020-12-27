@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import ax from "axios"
+import  { Redirect } from 'react-router-dom'
 
 export default function PostMessage(){
 
@@ -26,11 +27,11 @@ export default function PostMessage(){
             message : input.message
         }
         ax.post("http://localhost:5000/postMessages/",newV)
-        
+        return <Redirect to="/datas" />        
     }
     return (
     <div className="container"> 
-        <form >
+        <form action="/datas">
             <div class="form-group">
                 <label for="title">title</label>
                 <input type="text" class="form-control" onChange={handleChange}  placeholder="Enter title" name="title" id="title" />
@@ -39,7 +40,9 @@ export default function PostMessage(){
                 <input type="text" class="form-control" name="message" onChange={handleChange}  placeholder="Enter title" id="title" />
             </div>
            
-            <button type="submit" onClick={handleClick} class="btn btn-primary">Submit</button>
+            <button type="submit" onClick={handleClick} class="btn btn-primary">
+                Submit
+            </button>
         </form>
     </div>)
 }
